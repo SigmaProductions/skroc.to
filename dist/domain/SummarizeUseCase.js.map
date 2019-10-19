@@ -1,0 +1,1 @@
+{"version":3,"file":"SummarizeUseCase.js","sourceRoot":"","sources":["../../src/domain/SummarizeUseCase.ts"],"names":[],"mappings":";;AAAA,kFAA8E;AAE9E,MAAa,gBAAgB;IAGzB;QACI,IAAI,CAAC,iBAAiB,GAAG,IAAI,mCAAgB,EAAE,CAAA;IACnD,CAAC;IAEM,KAAK,CAAC,MAAM;QACf,IAAI,CAAC,iBAAiB,CAAC,SAAS,EAAE,CAAA;IACtC,CAAC;CACJ;AAVD,4CAUC"}
