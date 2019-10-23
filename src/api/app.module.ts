@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
-import { SerializationController } from './serialization.controller';
-import { AppService } from '../infrastructure/services/app.service';
-import { SummarizePresenter} from '../api/presenter/SummarizePresenter';
+import { SummarizationController } from './controllers/summarization.controller';
+import { SummarizePresenter} from './presenter/summarize.presenter';
+import { SummarizeTextUseCase } from '../domain/summarize.text.use.case';
+import { SummarizeService } from '../domain/services/summarize.service';
 
 @Module({
   imports: [],
-  controllers: [SerializationController],
-  providers: [SummarizePresenter],
+  controllers: [SummarizationController],
+  providers: [SummarizePresenter, SummarizeTextUseCase, SummarizeService],
 })
 export class AppModule {}
