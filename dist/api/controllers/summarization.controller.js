@@ -21,17 +21,16 @@ let SummarizationController = class SummarizationController {
         this._summarizeUseCase = _summarizeUseCase;
         this._summarizePresenter = _summarizePresenter;
     }
-    Summarize(summarizeRequest, res) {
+    Summarize(summarizeRequest) {
         this._summarizeUseCase.Handle(summarizeRequest, this._summarizePresenter);
-        res.status(this._summarizePresenter.Result.Status)
-            .send(this._summarizePresenter.Result.Content);
+        return this._summarizePresenter.Result;
     }
 };
 __decorate([
-    common_1.Post(),
-    __param(0, common_1.Body()), __param(1, common_1.Res()),
+    common_1.Post("summarize"),
+    __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [summarize_text_request_1.SummarizeTextRequest, Object]),
+    __metadata("design:paramtypes", [summarize_text_request_1.SummarizeTextRequest]),
     __metadata("design:returntype", void 0)
 ], SummarizationController.prototype, "Summarize", null);
 SummarizationController = __decorate([

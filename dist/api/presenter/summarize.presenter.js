@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const json_serializer_1 = require("./json.serializer");
-const content_result_1 = require("./content.result");
 let SummarizePresenter = class SummarizePresenter {
     Handle(response) {
-        this.Result = new content_result_1.ContentResult();
-        this.Result.Status = response.Success ? common_1.HttpStatus.OK : common_1.HttpStatus.INTERNAL_SERVER_ERROR;
-        this.Result.Content = json_serializer_1.JsonSerializer.SerializerObject(response.Success ? response.SummarizedText : response.Errors);
+        this.Result = {
+            "status": response.Success ? common_1.HttpStatus.OK : common_1.HttpStatus.INTERNAL_SERVER_ERROR,
+            "body": json_serializer_1.JsonSerializer.SerializerObject(response.Success ? response.SummarizedText : response.Errors)
+        };
     }
 };
 SummarizePresenter = __decorate([
