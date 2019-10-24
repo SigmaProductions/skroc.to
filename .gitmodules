@@ -1,0 +1,6 @@
+[sumbodule "TextRank"]
+	path = vendor/TextRank
+	url = https://github.com/summanlp/textrank
+[submodule "vendor/textrank"]
+	path = vendor/textrank
+	url = https://github.com/summanlp/textrank
