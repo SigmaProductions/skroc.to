@@ -12,9 +12,9 @@ export class SummarizationController {
     private readonly _summarizePresenter: SummarizePresenter) { }
 
   @Post("summarize")
-  public  Summarize(@Body() summarizeRequest: SummarizeTextRequest)   
+  public async  Summarize(@Body() summarizeRequest: SummarizeTextRequest)   
   {
-    this._summarizeUseCase.Handle(summarizeRequest, this._summarizePresenter)
+    await this._summarizeUseCase.Handle(summarizeRequest, this._summarizePresenter)
     return this._summarizePresenter.Result
 
   }
