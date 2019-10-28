@@ -7,7 +7,18 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "launch tests in debug",
+            "name": "Launch with debug via NPM",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script",
+                "start:debug"
+            ],
+            "port": 3000
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "launch with debug via NPM",
             "runtimeExecutable": "npm",
             "runtimeArgs": [
                 "run-script",

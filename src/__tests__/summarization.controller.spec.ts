@@ -27,8 +27,8 @@ describe('AppController', () => {
 
       var result =appController.Summarize(request)
       
-      result.then(value=>{
-        expect(value.status).resolves.toBe(HttpStatus.OK);
+      return result.then(value=>{
+        expect(value.status).toBe(HttpStatus.OK);
       })
     });
   });
