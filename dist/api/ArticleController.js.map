@@ -1,1 +1,0 @@
-{"version":3,"file":"ArticleController.js","sourceRoot":"","sources":["../../src/api/ArticleController.ts"],"names":[],"mappings":";;AAAA,iEAA6D;AAG7D,MAAa,iBAAiB;IAG1B;QACI,IAAI,CAAC,iBAAiB,GAAG,IAAI,mCAAgB,EAAE,CAAA;IACnD,CAAC;IAEM,GAAG,CAAC,GAAsB,EAAE,QAA6B;QAE5D,OAAO,EAAC,UAAU,EAAE,GAAG,CAAC,OAAO,EAAC,CAAA;IACpC,CAAC;CAEJ;AAZD,8CAYC"}
