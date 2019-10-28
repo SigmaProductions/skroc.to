@@ -4,11 +4,14 @@
 Skroc.To backend is RESTful API webserver for text summarization clients (we are planning on implementing website and forum bot)
 
 ## Installation
-
-Use npm to install dependencies 
+To install dependencies use npm 
 
 ```bash
 npm install 
+```
+And pip (we are working on using summa as submodule but for now we just import it)
+```bash
+pip install summa
 ```
 
 ## Usage
