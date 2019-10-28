@@ -5,8 +5,8 @@ export declare class SummarizationController {
     private readonly _summarizeUseCase;
     private readonly _summarizePresenter;
     constructor(_summarizeUseCase: SummarizeTextUseCase, _summarizePresenter: SummarizePresenter);
-    Summarize(summarizeRequest: SummarizeTextRequest): {
+    Summarize(summarizeRequest: SummarizeTextRequest): Promise<{
         "status": number;
         "body": string;
-    };
+    }>;
 }

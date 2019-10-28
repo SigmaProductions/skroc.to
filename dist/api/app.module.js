@@ -10,7 +10,7 @@ const common_1 = require("@nestjs/common");
 const summarization_controller_1 = require("./controllers/summarization.controller");
 const summarize_presenter_1 = require("./presenter/summarize.presenter");
 const summarize_text_use_case_1 = require("../domain/summarize.text.use.case");
-const summarize_service_1 = require("../domain/services/summarize.service");
+const summarize_service_1 = require("../domain/services/summarize.service/summarize.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([

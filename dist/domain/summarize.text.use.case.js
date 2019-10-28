@@ -11,14 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const summarize_response_1 = require("./dto/responses/summarize.response");
-const summarize_service_1 = require("./services/summarize.service");
+const summarize_service_1 = require("./services/summarize.service/summarize.service");
 let SummarizeTextUseCase = class SummarizeTextUseCase {
     constructor(_summarizeService) {
         this._summarizeService = _summarizeService;
     }
-    Handle(summarizeRequest, outputPort) {
+    async Handle(summarizeRequest, outputPort) {
         try {
-            var summarizedString = this._summarizeService.Summarize(summarizeRequest.TextToSummarize);
+            var summarizedString = await this._summarizeService.Summarize(summarizeRequest.TextToSummarize);
         }
         catch (error) {
             outputPort.Handle(new summarize_response_1.SummarizeResponse(undefined, ["error summarizing"], false));
